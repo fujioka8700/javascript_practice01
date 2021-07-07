@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>コールバックとthis</title>
+</head>
+<body>
+    <script>
+        var sale = (_name, price, func1, func2) => {
+            func1(_name, price)
+            func2()
+        }
+        function tomato(_name, price, func) {
+            const name = _name
+            func(name, price)
+        }
+        const price = function(name, price) {
+            console.log(name + 'の値段は' + price + '円です。')
+        }
+
+        price('トマト', 100)
+        tomato('トマト', 100, price)
+
+        sale('トマト', 100, price, function(){
+            console.log('安いですね');
+        })
+    </script>
+</body>
+</html>

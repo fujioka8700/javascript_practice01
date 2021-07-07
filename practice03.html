@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // 親
+        var Fish = function (fish) {
+            this.name = fish['name']
+            this.getName = function() {
+                return this.name
+            }
+            this.color = function () {
+                console.log(fish['color']);
+            }
+        }
+
+        var Kingyo = function (fish) {
+            this.name = fish['name']
+            this.color = function () {
+                console.log(fish['color']);
+            }
+        }
+        // 子
+        Kingyo.prototype = new Fish()
+
+        var medaka = new Fish({
+            name: 'めだか',
+            color: '黄'
+        })
+        console.log(medaka.getName());
+        medaka.color()
+
+        var kingyo = new Kingyo({
+            name: '金魚',
+            color: '赤'
+        })
+        console.log(kingyo.name);
+        // kingyo.color()
+    </script>
+</body>
+
+</html>

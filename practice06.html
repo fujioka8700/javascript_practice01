@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>thisについて</title>
+</head>
+<body>
+    <script>
+        console.log(this instanceof Window);
+
+        var hoge = {
+            disp: function() {
+                console.log(this);
+            }
+        }
+        hoge.disp()
+        var fuga = hoge.disp
+        fuga()
+
+        function disp2() {
+            console.log(this);
+        }
+        disp2()
+
+        console.log('----------------');
+
+        // インスタンスとthis
+        var Animal = function(_name) {
+            this.name = _name
+        }
+        Animal.prototype.show = function() {
+            console.log(this.name);
+        }
+        var lion = new Animal('らいおん')
+        console.log(lion.name);
+        lion.show()
+
+    </script>
+</body>
+</html>

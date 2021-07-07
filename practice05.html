@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>class構文</title>
+</head>
+
+<body>
+    <script>
+        class Animal {
+            constructor() {}
+            bark() {
+                console.log('キャーン');
+            }
+            danger() {
+                console.log('動物は危険');
+            }
+        }
+
+        class Lion extends Animal {
+            constructor(_name) {
+                super()
+                this.name = _name
+            }
+            bark() {
+                console.log(this.name + '!!');
+            }
+        }
+
+        var animal = new Animal()
+        animal.bark()
+        animal.danger()
+
+        var lion = new Lion('らいおん')
+        lion.bark()
+        lion.danger()
+    </script>
+</body>
+
+</html>
