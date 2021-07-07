@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>復習2です。</title>
+</head>
+<body>
+    <script>
+        var hoge = new Object()
+        console.log(hoge);
+
+        var hoge2 = {
+            huga: 'ふが'
+        }
+        console.log(typeof hoge2.huga);
+
+        var str = new String('文字オブジェクト')
+        console.log(str.toString());
+
+        console.log('Schedule'.length);
+
+        hoge3()
+        function hoge3(){
+            console.log('hoge3関数です');
+        }
+
+        var hoge4 = (animal='らいおん') => {
+            return {
+                name: animal + '猫猫太郎'
+            }
+        }
+        console.log(hoge4('犬')['name']);
+        console.log(hoge4()['name']);
+
+        for (let i = 0; i < 5; i++) {
+            (function(x){
+                console.log(x);
+            })(i)
+        }
+
+        var hoge5 = (...args) => {
+            for (const item of args) {
+                console.log(item);
+            }
+        }
+        hoge5('りんご','オレンジ','メロン')
+
+        var hoge6 = x => x * 5
+        console.log(hoge6(5));
+
+        var hoge7 = () => {
+            'use strict'
+            var a = 5
+            return 777
+        }
+        console.log(hoge7());
+        // console.log(a);
+
+        if (true) {
+            let hoge8 = 'hogehoge'
+            console.log(hoge8);
+        }
+        // console.log(hoge8);
+
+        var hoge9 = 'グローバル'
+        function fuga1() {
+            var hoge9 = 'ローカル'
+            console.log(hoge9);
+        }
+        fuga1()
+
+        var Animal = function(_name){
+            // var this2 = {}
+            // this2.name = _name
+            this.name = name
+            // return this2
+        }
+        var animal = new Animal('うさぎ')
+        console.log(animal.name);
+    </script>
+</body>
+</html>
