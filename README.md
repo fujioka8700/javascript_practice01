@@ -1,0 +1,1 @@
+# JavaScriptの復習2です。
