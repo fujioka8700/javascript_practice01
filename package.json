@@ -1,0 +1,24 @@
+{
+  "name": "javascript_practice01",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fujioka8700/javascript_practice01.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/fujioka8700/javascript_practice01/issues"
+  },
+  "homepage": "https://github.com/fujioka8700/javascript_practice01#readme",
+  "dependencies": {
+    "webpack": "^5.44.0"
+  },
+  "devDependencies": {}
+}
